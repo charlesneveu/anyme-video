@@ -35,7 +35,7 @@ body {
     max-width: 100%;
     width: 100%;
     margin: 0 auto;
-    padding: var(--spacing);
+    padding: 10px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -58,11 +58,33 @@ body {
 /* Vidéo */
 .video-player {
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     height: auto;
+    min-height: 200px;
     border-radius: var(--border-radius);
     background-color: #000;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: block;
+    object-fit: contain;
+}
+
+/* Message d'erreur vidéo */
+.video-error {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-light);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius);
+    margin-top: 10px;
+}
+
+.video-error.hidden {
+    display: none;
+}
+
+.video-error p {
+    margin: 5px 0;
+    font-size: 14px;
 }
 
 /* End Screen */
@@ -207,7 +229,8 @@ body {
 #view-video .container {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
+    padding: 10px;
 }
 
 /* Responsive */

@@ -12,7 +12,7 @@ const fs = require('fs');
 const path = require('path');
 
 // ⚠️ MODIFIER ICI : URL de votre site GitHub Pages
-const GITHUB_PAGES_URL = 'https://MON_USERNAME.github.io/anyme-video/';
+const GITHUB_PAGES_URL = 'https://charlesneveu.github.io/anyme-video/';
 
 // Générer SVG
 QRCode.toFile(

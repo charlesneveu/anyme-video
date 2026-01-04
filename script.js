@@ -15,12 +15,15 @@ const viewTable = document.getElementById('view-table');
 
 // Initialisation
 document.addEventListener('DOMContentLoaded', () => {
+    const videoError = document.getElementById('video-error');
+    
     // Gestion des erreurs de chargement vidéo
     video.addEventListener('error', (e) => {
         console.error('Erreur vidéo:', video.error);
         if (video.error) {
-            const errorMsg = video.error.message || 'Erreur de chargement de la vidéo';
-            alert('Erreur de chargement de la vidéo. Vérifiez que le fichier assets/video.mp4 existe et est au bon format.');
+            videoError.classList.remove('hidden');
+            console.error('Code erreur:', video.error.code);
+            console.error('Message:', video.error.message);
         }
     });
     
@@ -28,18 +31,22 @@ document.addEventListener('DOMContentLoaded', () => {
     video.addEventListener('loadedmetadata', () => {
         console.log('Métadonnées vidéo chargées');
         console.log('Durée:', video.duration, 'secondes');
+        videoError.classList.add('hidden');
     });
     
     video.addEventListener('canplay', () => {
         console.log('Vidéo prête à être lue');
+        videoError.classList.add('hidden');
     });
     
     video.addEventListener('loadstart', () => {
         console.log('Chargement de la vidéo démarré');
+        videoError.classList.add('hidden');
     });
     
-    // Forcer le chargement de la vidéo
-    video.load();
+    // Sur mobile, ne pas forcer le chargement automatique
+    // Laisser l'utilisateur cliquer sur play
+    // video.load(); // Commenté pour économiser la bande passante mobile
     
     // Écouter la fin de la vidéo
     video.addEventListener('ended', () => {
