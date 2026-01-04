@@ -232,27 +232,59 @@ body {
 
 /* Animation Anniversaire */
 .birthday-text {
+    -webkit-animation: bounce 0.6s ease-in-out infinite, fadeIn 0.5s ease-out;
     animation: bounce 0.6s ease-in-out infinite, fadeIn 0.5s ease-out;
     color: #FF6B9D;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+@-webkit-keyframes bounce {
+    0%, 100% {
+        -webkit-transform: translateY(0) scale(1);
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        -webkit-transform: translateY(-10px) scale(1.05);
+        transform: translateY(-10px) scale(1.05);
+    }
 }
 
 @keyframes bounce {
     0%, 100% {
+        -webkit-transform: translateY(0) scale(1);
         transform: translateY(0) scale(1);
     }
     50% {
+        -webkit-transform: translateY(-10px) scale(1.05);
         transform: translateY(-10px) scale(1.05);
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
     }
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
+        -webkit-transform: scale(0.8);
         transform: scale(0.8);
     }
     to {
         opacity: 1;
+        -webkit-transform: scale(1);
         transform: scale(1);
     }
 }
@@ -262,34 +294,71 @@ body {
     position: fixed;
     top: -100px;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     z-index: 1000;
+    -webkit-animation: cakeFall 1s ease-in forwards;
     animation: cakeFall 1s ease-in forwards;
     pointer-events: none;
+    -webkit-transform: translateZ(0);
+    will-change: transform, top;
+}
+
+@-webkit-keyframes cakeFall {
+    0% {
+        top: -100px;
+        -webkit-transform: translateX(-50%) rotate(0deg);
+        transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+        top: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%) rotate(360deg);
+        transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
 }
 
 @keyframes cakeFall {
     0% {
         top: -100px;
+        -webkit-transform: translateX(-50%) rotate(0deg);
         transform: translateX(-50%) rotate(0deg);
     }
     100% {
         top: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%) rotate(360deg);
         transform: translateX(-50%) translateY(-50%) rotate(360deg);
     }
 }
 
 .cake {
     font-size: 80px;
+    -webkit-animation: cakeFloat 2s ease-in-out 1s infinite;
     animation: cakeFloat 2s ease-in-out 1s infinite;
+    -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+@-webkit-keyframes cakeFloat {
+    0%, 100% {
+        -webkit-transform: translateY(0) scale(1);
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        -webkit-transform: translateY(-20px) scale(1.05);
+        transform: translateY(-20px) scale(1.05);
+    }
 }
 
 @keyframes cakeFloat {
     0%, 100% {
+        -webkit-transform: translateY(0) scale(1);
         transform: translateY(0) scale(1);
     }
     50% {
+        -webkit-transform: translateY(-20px) scale(1.05);
         transform: translateY(-20px) scale(1.05);
     }
 }
@@ -311,7 +380,11 @@ body {
     width: 10px;
     height: 10px;
     background: #FF6B9D;
+    -webkit-animation: confettiFall linear forwards;
     animation: confettiFall linear forwards;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform, top, opacity;
 }
 
 .confetti-1 { left: 10%; animation-duration: 3s; animation-delay: 0s; background: #FF6B9D; }
@@ -335,14 +408,31 @@ body {
 .confetti-19 { left: 95%; animation-duration: 3.3s; animation-delay: 0.1s; background: #95E1D3; }
 .confetti-20 { left: 50%; animation-duration: 2.7s; animation-delay: 0.5s; background: #FFE66D; }
 
-@keyframes confettiFall {
+@-webkit-keyframes confettiFall {
     0% {
         top: -10px;
+        -webkit-transform: translateX(0) rotate(0deg);
         transform: translateX(0) rotate(0deg);
         opacity: 1;
     }
     100% {
         top: 100vh;
+        -webkit-transform: translateX(100px) rotate(720deg);
+        transform: translateX(100px) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes confettiFall {
+    0% {
+        top: -10px;
+        -webkit-transform: translateX(0) rotate(0deg);
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        top: 100vh;
+        -webkit-transform: translateX(100px) rotate(720deg);
         transform: translateX(100px) rotate(720deg);
         opacity: 0;
     }
@@ -354,7 +444,8 @@ body {
 }
 
 .confetti-2, .confetti-4, .confetti-6, .confetti-8, .confetti-10, .confetti-12, .confetti-14, .confetti-16, .confetti-18, .confetti-20 {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg) translateZ(0);
+    transform: rotate(45deg) translateZ(0);
 }
 
 /* Position relative pour end-screen */
@@ -503,7 +594,34 @@ body {
 /* Animations et transitions */
 @media (prefers-reduced-motion: no-preference) {
     .end-screen-content {
+        -webkit-animation: slideUp 0.3s ease-out;
         animation: slideUp 0.3s ease-out;
+    }
+}
+
+@-webkit-keyframes slideUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
