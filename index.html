@@ -152,5 +152,48 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Forcer la lecture de la vidéo de fond sur Chrome
+        document.addEventListener('DOMContentLoaded', function() {
+            const bgVideo = document.getElementById('background-video');
+            if (bgVideo) {
+                // Essayer de jouer la vidéo
+                const playPromise = bgVideo.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        // Vidéo jouée avec succès, activer le son
+                        bgVideo.muted = false;
+                    }).catch(error => {
+                        // Si autoplay échoue, essayer avec muted puis activer le son
+                        bgVideo.muted = true;
+                        bgVideo.play().then(() => {
+                            setTimeout(() => {
+                                bgVideo.muted = false;
+                            }, 100);
+                        });
+                    });
+                }
+                
+                // Forcer la lecture après chargement
+                bgVideo.addEventListener('loadeddata', function() {
+                    this.muted = false;
+                    this.play().catch(() => {
+                        this.muted = true;
+                        this.play().then(() => {
+                            setTimeout(() => {
+                                this.muted = false;
+                            }, 100);
+                        });
+                    });
+                });
+                
+                // Relancer si la vidéo s'arrête
+                bgVideo.addEventListener('pause', function() {
+                    this.play();
+                });
+            }
+        });
+    </script>
 </body>
 </html>
