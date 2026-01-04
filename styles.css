@@ -689,9 +689,10 @@ body {
     height: auto;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    z-index: 0;
+    z-index: -1;
     object-fit: cover;
     opacity: 0.6;
+    pointer-events: none;
 }
 
 /* Vue Intro Anniversaire */
@@ -705,7 +706,7 @@ body {
     overflow: hidden;
     background: linear-gradient(135deg, rgba(26, 26, 46, 0.7) 0%, rgba(22, 33, 62, 0.7) 50%, rgba(15, 52, 96, 0.7) 100%);
     padding: var(--spacing-xl) var(--spacing-md);
-    z-index: 1;
+    z-index: 10;
 }
 
 .intro-content {
@@ -954,7 +955,7 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 50;
+    z-index: 30;
     overflow: hidden;
 }
 
@@ -1046,7 +1047,7 @@ body {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    z-index: 200;
+    z-index: 60;
     display: flex;
     gap: 20px;
     pointer-events: none;
