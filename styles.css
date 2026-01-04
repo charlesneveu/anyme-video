@@ -591,7 +591,16 @@ body {
     }
     
     .video-player {
-        border-radius: 0;
+        width: auto;
+        height: calc(100vh - 24px);
+        max-width: calc(100vw - 24px);
+        border-radius: 20px;
+        position: relative;
+        top: auto;
+        left: auto;
+        -webkit-transform: none;
+        transform: none;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
 }
 
