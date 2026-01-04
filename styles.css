@@ -514,6 +514,16 @@ body {
     justify-content: center;
 }
 
+@media (max-width: 480px) {
+    #view-video .container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        padding: var(--spacing-sm);
+    }
+}
+
 /* Responsive Mobile First */
 @media (max-width: 480px) {
     .container {
