@@ -555,50 +555,50 @@ body {
 /* Desktop */
 @media (min-width: 768px) {
     .container {
-        padding: 30px;
+        padding: var(--spacing-xl);
     }
     
     #view-video .container {
         max-width: 900px;
-        padding: 30px;
+        padding: var(--spacing-xl);
     }
     
     .button-group {
         flex-direction: row;
         justify-content: center;
-        gap: 15px;
+        gap: var(--spacing-md);
     }
     
     .btn {
-        min-width: 160px;
+        min-width: 180px;
     }
     
     .end-screen-content {
-        padding: 40px 35px;
+        padding: var(--spacing-2xl) var(--spacing-xl);
     }
     
     .end-screen-content h2 {
-        font-size: 24px;
+        font-size: 32px;
     }
     
     .next-content {
-        padding: 40px 35px;
+        padding: var(--spacing-2xl) var(--spacing-xl);
     }
     
     .next-content h1 {
-        font-size: 36px;
+        font-size: 44px;
     }
     
     .subtitle {
-        font-size: 18px;
+        font-size: 19px;
     }
     
     .table-content {
-        padding: 50px 40px;
+        padding: var(--spacing-2xl) var(--spacing-xl);
     }
     
     .table-content h1 {
-        font-size: 42px;
+        font-size: 48px;
     }
     
     .cake {
@@ -607,6 +607,10 @@ body {
     
     .video-player {
         max-width: 900px;
+    }
+    
+    .birthday-title {
+        font-size: 72px;
     }
 }
 
