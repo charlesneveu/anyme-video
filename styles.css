@@ -33,10 +33,14 @@ body {
     background-attachment: fixed;
     color: var(--text-color);
     min-height: 100vh;
+    min-height: -webkit-fill-available;
     padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     letter-spacing: -0.01em;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 /* Container */
@@ -56,7 +60,11 @@ body {
 .view {
     display: none;
     width: 100%;
+    max-width: 100vw;
     min-height: 100vh;
+    min-height: -webkit-fill-available;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .view.active {
