@@ -27,11 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Gestion du chargement
     video.addEventListener('loadedmetadata', () => {
         console.log('Métadonnées vidéo chargées');
+        console.log('Durée:', video.duration, 'secondes');
     });
     
     video.addEventListener('canplay', () => {
         console.log('Vidéo prête à être lue');
     });
+    
+    video.addEventListener('loadstart', () => {
+        console.log('Chargement de la vidéo démarré');
+    });
+    
+    // Forcer le chargement de la vidéo
+    video.load();
     
     // Écouter la fin de la vidéo
     video.addEventListener('ended', () => {
