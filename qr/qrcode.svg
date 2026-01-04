@@ -1,0 +1,25 @@
+<!-- 
+QR Code SVG - Template
+⚠️ Ce fichier doit être remplacé par un vrai QR code après le déploiement.
+
+Pour générer le QR code :
+1. Installez qrcode: npm install qrcode
+2. Modifiez qr/generate-qr.js avec votre URL GitHub Pages
+3. Exécutez: node qr/generate-qr.js
+
+Ou utilisez un générateur en ligne :
+- https://www.qr-code-generator.com/
+- https://qr.io/
+- Entrez l'URL: https://MON_USERNAME.github.io/anyme-video/
+- Téléchargez en SVG et remplacez ce fichier
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="white"/>
+  <text x="150" y="150" text-anchor="middle" font-family="Arial" font-size="14" fill="black">
+    QR Code à générer
+  </text>
+  <text x="150" y="170" text-anchor="middle" font-family="Arial" font-size="10" fill="gray">
+    Voir README.md
+  </text>
+</svg>
+

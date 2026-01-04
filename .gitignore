@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Optionnel : ignorer la vidéo si elle est trop grande
+# assets/video.mp4
+

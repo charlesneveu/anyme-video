@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Découvrez comment se réconcilier avec Anyme">
+    <title>Anyme - Vidéo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Vue Vidéo -->
+    <div id="view-video" class="view active">
+        <div class="container">
+            <video 
+                id="main-video" 
+                controls 
+                playsinline 
+                preload="metadata"
+                poster=""
+                class="video-player">
+                <source src="assets/video.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            
+            <!-- End Screen (affiché après la fin de la vidéo) -->
+            <div id="end-screen" class="end-screen hidden">
+                <div class="end-screen-content">
+                    <h2>Vidéo terminée</h2>
+                    <div class="button-group">
+                        <button id="btn-revoir" class="btn btn-primary">Revoir</button>
+                        <button id="btn-suivant" class="btn btn-secondary">Suivant</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vue Suivant -->
+    <div id="view-next" class="view">
+        <div class="container">
+            <div class="next-content">
+                <h1>Merci d'avoir regardé</h1>
+                <p class="subtitle">Continuez votre découverte</p>
+                <button id="btn-discover" class="btn btn-primary btn-large">
+                    Pour découvrir comment se réconcilier avec Anyme
+                </button>
+                <button id="btn-retour" class="btn btn-link">Retour à la vidéo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vue Table -->
+    <div id="view-table" class="view">
+        <div class="container">
+            <div class="table-content">
+                <h1>Look under the table</h1>
+                <button id="btn-retour-table" class="btn btn-link">Retour</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
