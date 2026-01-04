@@ -630,3 +630,401 @@ body {
     outline: 3px solid var(--primary-color);
     outline-offset: 2px;
 }
+
+/* Vue Intro Anniversaire */
+.intro-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.intro-content {
+    position: relative;
+    z-index: 1000;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.birthday-title {
+    font-size: 42px;
+    font-weight: 900;
+    color: #FFD700;
+    text-shadow: 
+        0 0 10px rgba(255, 215, 0, 0.8),
+        0 0 20px rgba(255, 215, 0, 0.6),
+        0 0 30px rgba(255, 215, 0, 0.4),
+        3px 3px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    letter-spacing: 4px;
+    -webkit-animation: titleGlow 2s ease-in-out infinite;
+    animation: titleGlow 2s ease-in-out infinite;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+@-webkit-keyframes titleGlow {
+    0%, 100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        text-shadow: 
+            0 0 10px rgba(255, 215, 0, 0.8),
+            0 0 20px rgba(255, 215, 0, 0.6),
+            0 0 30px rgba(255, 215, 0, 0.4);
+    }
+    50% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+        text-shadow: 
+            0 0 20px rgba(255, 215, 0, 1),
+            0 0 30px rgba(255, 215, 0, 0.8),
+            0 0 40px rgba(255, 215, 0, 0.6);
+    }
+}
+
+@keyframes titleGlow {
+    0%, 100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        text-shadow: 
+            0 0 10px rgba(255, 215, 0, 0.8),
+            0 0 20px rgba(255, 215, 0, 0.6),
+            0 0 30px rgba(255, 215, 0, 0.4);
+    }
+    50% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+        text-shadow: 
+            0 0 20px rgba(255, 215, 0, 1),
+            0 0 30px rgba(255, 215, 0, 0.8),
+            0 0 40px rgba(255, 215, 0, 0.6);
+    }
+}
+
+.btn-intro {
+    font-size: 18px;
+    padding: 18px 40px;
+    margin-top: 20px;
+}
+
+/* Feux d'artifice */
+.fireworks-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.firework {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    -webkit-animation: fireworkExplode 2s ease-out forwards;
+    animation: fireworkExplode 2s ease-out forwards;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.firework-1 {
+    top: 20%;
+    left: 20%;
+    background: #FF6B9D;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.firework-2 {
+    top: 30%;
+    left: 80%;
+    background: #4ECDC4;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.firework-3 {
+    top: 60%;
+    left: 15%;
+    background: #FFE66D;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.firework-4 {
+    top: 40%;
+    left: 70%;
+    background: #95E1D3;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+.firework-5 {
+    top: 70%;
+    left: 50%;
+    background: #FF6B9D;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.firework-6 {
+    top: 25%;
+    left: 50%;
+    background: #FFE66D;
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+
+@-webkit-keyframes fireworkExplode {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 
+            0 0 0 0 rgba(255, 107, 157, 0.8),
+            0 0 0 0 rgba(78, 205, 196, 0.8),
+            0 0 0 0 rgba(255, 230, 109, 0.8);
+    }
+    50% {
+        -webkit-transform: scale(20);
+        transform: scale(20);
+        opacity: 0.8;
+        box-shadow: 
+            -50px -50px 0 20px rgba(255, 107, 157, 0.3),
+            50px 50px 0 20px rgba(78, 205, 196, 0.3),
+            -50px 50px 0 20px rgba(255, 230, 109, 0.3),
+            50px -50px 0 20px rgba(149, 225, 211, 0.3);
+    }
+    100% {
+        -webkit-transform: scale(40);
+        transform: scale(40);
+        opacity: 0;
+        box-shadow: 
+            -100px -100px 0 40px rgba(255, 107, 157, 0),
+            100px 100px 0 40px rgba(78, 205, 196, 0),
+            -100px 100px 0 40px rgba(255, 230, 109, 0),
+            100px -100px 0 40px rgba(149, 225, 211, 0);
+    }
+}
+
+@keyframes fireworkExplode {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 
+            0 0 0 0 rgba(255, 107, 157, 0.8),
+            0 0 0 0 rgba(78, 205, 196, 0.8),
+            0 0 0 0 rgba(255, 230, 109, 0.8);
+    }
+    50% {
+        -webkit-transform: scale(20);
+        transform: scale(20);
+        opacity: 0.8;
+        box-shadow: 
+            -50px -50px 0 20px rgba(255, 107, 157, 0.3),
+            50px 50px 0 20px rgba(78, 205, 196, 0.3),
+            -50px 50px 0 20px rgba(255, 230, 109, 0.3),
+            50px -50px 0 20px rgba(149, 225, 211, 0.3);
+    }
+    100% {
+        -webkit-transform: scale(40);
+        transform: scale(40);
+        opacity: 0;
+        box-shadow: 
+            -100px -100px 0 40px rgba(255, 107, 157, 0),
+            100px 100px 0 40px rgba(78, 205, 196, 0),
+            -100px 100px 0 40px rgba(255, 230, 109, 0),
+            100px -100px 0 40px rgba(149, 225, 211, 0);
+    }
+}
+
+/* Confettis Intro */
+.intro-confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+    overflow: hidden;
+}
+
+.intro-confetti {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    -webkit-animation: introConfettiFall linear forwards;
+    animation: introConfettiFall linear forwards;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform, top, opacity;
+}
+
+.intro-confetti-1 { left: 5%; animation-duration: 3s; animation-delay: 0s; background: #FF6B9D; }
+.intro-confetti-2 { left: 10%; animation-duration: 2.5s; animation-delay: 0.1s; background: #4ECDC4; }
+.intro-confetti-3 { left: 15%; animation-duration: 3.5s; animation-delay: 0.2s; background: #FFE66D; }
+.intro-confetti-4 { left: 20%; animation-duration: 2.8s; animation-delay: 0s; background: #FF6B9D; }
+.intro-confetti-5 { left: 25%; animation-duration: 3.2s; animation-delay: 0.3s; background: #95E1D3; }
+.intro-confetti-6 { left: 30%; animation-duration: 2.6s; animation-delay: 0.1s; background: #FFE66D; }
+.intro-confetti-7 { left: 35%; animation-duration: 3.3s; animation-delay: 0.4s; background: #FF6B9D; }
+.intro-confetti-8 { left: 40%; animation-duration: 2.9s; animation-delay: 0.2s; background: #4ECDC4; }
+.intro-confetti-9 { left: 45%; animation-duration: 3.1s; animation-delay: 0s; background: #FFE66D; }
+.intro-confetti-10 { left: 50%; animation-duration: 2.7s; animation-delay: 0.3s; background: #95E1D3; }
+.intro-confetti-11 { left: 55%; animation-duration: 3.4s; animation-delay: 0.1s; background: #FF6B9D; }
+.intro-confetti-12 { left: 60%; animation-duration: 2.8s; animation-delay: 0.5s; background: #4ECDC4; }
+.intro-confetti-13 { left: 65%; animation-duration: 3s; animation-delay: 0.2s; background: #FFE66D; }
+.intro-confetti-14 { left: 70%; animation-duration: 2.6s; animation-delay: 0s; background: #FF6B9D; }
+.intro-confetti-15 { left: 75%; animation-duration: 3.2s; animation-delay: 0.4s; background: #95E1D3; }
+.intro-confetti-16 { left: 80%; animation-duration: 2.9s; animation-delay: 0.1s; background: #4ECDC4; }
+.intro-confetti-17 { left: 85%; animation-duration: 3.1s; animation-delay: 0.3s; background: #FFE66D; }
+.intro-confetti-18 { left: 90%; animation-duration: 2.7s; animation-delay: 0s; background: #FF6B9D; }
+.intro-confetti-19 { left: 95%; animation-duration: 3.3s; animation-delay: 0.2s; background: #95E1D3; }
+.intro-confetti-20 { left: 8%; animation-duration: 2.5s; animation-delay: 0.4s; background: #4ECDC4; }
+.intro-confetti-21 { left: 12%; animation-duration: 3.1s; animation-delay: 0.1s; background: #FFE66D; }
+.intro-confetti-22 { left: 18%; animation-duration: 2.8s; animation-delay: 0.3s; background: #FF6B9D; }
+.intro-confetti-23 { left: 22%; animation-duration: 3.2s; animation-delay: 0s; background: #95E1D3; }
+.intro-confetti-24 { left: 28%; animation-duration: 2.6s; animation-delay: 0.2s; background: #4ECDC4; }
+.intro-confetti-25 { left: 32%; animation-duration: 3.4s; animation-delay: 0.4s; background: #FFE66D; }
+.intro-confetti-26 { left: 38%; animation-duration: 2.9s; animation-delay: 0.1s; background: #FF6B9D; }
+.intro-confetti-27 { left: 42%; animation-duration: 3s; animation-delay: 0.3s; background: #95E1D3; }
+.intro-confetti-28 { left: 48%; animation-duration: 2.7s; animation-delay: 0s; background: #4ECDC4; }
+.intro-confetti-29 { left: 52%; animation-duration: 3.3s; animation-delay: 0.2s; background: #FFE66D; }
+.intro-confetti-30 { left: 58%; animation-duration: 2.8s; animation-delay: 0.4s; background: #FF6B9D; }
+
+@-webkit-keyframes introConfettiFall {
+    0% {
+        top: -10px;
+        -webkit-transform: translateX(0) rotate(0deg);
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        top: 100vh;
+        -webkit-transform: translateX(150px) rotate(720deg);
+        transform: translateX(150px) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes introConfettiFall {
+    0% {
+        top: -10px;
+        -webkit-transform: translateX(0) rotate(0deg);
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        top: 100vh;
+        -webkit-transform: translateX(150px) rotate(720deg);
+        transform: translateX(150px) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.intro-confetti-1, .intro-confetti-3, .intro-confetti-5, .intro-confetti-7, .intro-confetti-9, .intro-confetti-11, .intro-confetti-13, .intro-confetti-15, .intro-confetti-17, .intro-confetti-19, .intro-confetti-21, .intro-confetti-23, .intro-confetti-25, .intro-confetti-27, .intro-confetti-29 {
+    border-radius: 50%;
+}
+
+.intro-confetti-2, .intro-confetti-4, .intro-confetti-6, .intro-confetti-8, .intro-confetti-10, .intro-confetti-12, .intro-confetti-14, .intro-confetti-16, .intro-confetti-18, .intro-confetti-20, .intro-confetti-22, .intro-confetti-24, .intro-confetti-26, .intro-confetti-28, .intro-confetti-30 {
+    -webkit-transform: rotate(45deg) translateZ(0);
+    transform: rotate(45deg) translateZ(0);
+}
+
+/* Bougies */
+.candles-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 200;
+    display: flex;
+    gap: 20px;
+    pointer-events: none;
+}
+
+.candle {
+    font-size: 40px;
+    -webkit-animation: candleFlicker 1.5s ease-in-out infinite;
+    animation: candleFlicker 1.5s ease-in-out infinite;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+    -webkit-filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+}
+
+.candle-1 { -webkit-animation-delay: 0s; animation-delay: 0s; }
+.candle-2 { -webkit-animation-delay: 0.3s; animation-delay: 0.3s; }
+.candle-3 { -webkit-animation-delay: 0.6s; animation-delay: 0.6s; }
+.candle-4 { -webkit-animation-delay: 0.9s; animation-delay: 0.9s; }
+.candle-5 { -webkit-animation-delay: 1.2s; animation-delay: 1.2s; }
+
+@-webkit-keyframes candleFlicker {
+    0%, 100% {
+        -webkit-transform: scale(1) rotate(-2deg);
+        transform: scale(1) rotate(-2deg);
+    }
+    25% {
+        -webkit-transform: scale(1.1) rotate(2deg);
+        transform: scale(1.1) rotate(2deg);
+    }
+    50% {
+        -webkit-transform: scale(0.95) rotate(-1deg);
+        transform: scale(0.95) rotate(-1deg);
+    }
+    75% {
+        -webkit-transform: scale(1.05) rotate(1deg);
+        transform: scale(1.05) rotate(1deg);
+    }
+}
+
+@keyframes candleFlicker {
+    0%, 100% {
+        -webkit-transform: scale(1) rotate(-2deg);
+        transform: scale(1) rotate(-2deg);
+    }
+    25% {
+        -webkit-transform: scale(1.1) rotate(2deg);
+        transform: scale(1.1) rotate(2deg);
+    }
+    50% {
+        -webkit-transform: scale(0.95) rotate(-1deg);
+        transform: scale(0.95) rotate(-1deg);
+    }
+    75% {
+        -webkit-transform: scale(1.05) rotate(1deg);
+        transform: scale(1.05) rotate(1deg);
+    }
+}
+
+/* Responsive Intro */
+@media (max-width: 480px) {
+    .birthday-title {
+        font-size: 28px;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+    
+    .btn-intro {
+        font-size: 16px;
+        padding: 16px 32px;
+    }
+    
+    .candle {
+        font-size: 30px;
+    }
+    
+    .candles-container {
+        gap: 15px;
+        bottom: 15px;
+    }
+}

@@ -7,8 +7,72 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Vue Intro Anniversaire -->
+    <div id="view-intro" class="view active">
+        <div class="intro-container">
+            <!-- Feux d'artifice -->
+            <div class="fireworks-container">
+                <div class="firework firework-1"></div>
+                <div class="firework firework-2"></div>
+                <div class="firework firework-3"></div>
+                <div class="firework firework-4"></div>
+                <div class="firework firework-5"></div>
+                <div class="firework firework-6"></div>
+            </div>
+            
+            <!-- Confettis -->
+            <div class="intro-confetti-container">
+                <div class="intro-confetti intro-confetti-1"></div>
+                <div class="intro-confetti intro-confetti-2"></div>
+                <div class="intro-confetti intro-confetti-3"></div>
+                <div class="intro-confetti intro-confetti-4"></div>
+                <div class="intro-confetti intro-confetti-5"></div>
+                <div class="intro-confetti intro-confetti-6"></div>
+                <div class="intro-confetti intro-confetti-7"></div>
+                <div class="intro-confetti intro-confetti-8"></div>
+                <div class="intro-confetti intro-confetti-9"></div>
+                <div class="intro-confetti intro-confetti-10"></div>
+                <div class="intro-confetti intro-confetti-11"></div>
+                <div class="intro-confetti intro-confetti-12"></div>
+                <div class="intro-confetti intro-confetti-13"></div>
+                <div class="intro-confetti intro-confetti-14"></div>
+                <div class="intro-confetti intro-confetti-15"></div>
+                <div class="intro-confetti intro-confetti-16"></div>
+                <div class="intro-confetti intro-confetti-17"></div>
+                <div class="intro-confetti intro-confetti-18"></div>
+                <div class="intro-confetti intro-confetti-19"></div>
+                <div class="intro-confetti intro-confetti-20"></div>
+                <div class="intro-confetti intro-confetti-21"></div>
+                <div class="intro-confetti intro-confetti-22"></div>
+                <div class="intro-confetti intro-confetti-23"></div>
+                <div class="intro-confetti intro-confetti-24"></div>
+                <div class="intro-confetti intro-confetti-25"></div>
+                <div class="intro-confetti intro-confetti-26"></div>
+                <div class="intro-confetti intro-confetti-27"></div>
+                <div class="intro-confetti intro-confetti-28"></div>
+                <div class="intro-confetti intro-confetti-29"></div>
+                <div class="intro-confetti intro-confetti-30"></div>
+            </div>
+            
+            <!-- Bougies -->
+            <div class="candles-container">
+                <div class="candle candle-1">🕯️</div>
+                <div class="candle candle-2">🕯️</div>
+                <div class="candle candle-3">🕯️</div>
+                <div class="candle candle-4">🕯️</div>
+                <div class="candle candle-5">🕯️</div>
+            </div>
+            
+            <!-- Texte Joyeux Anniversaire -->
+            <div class="intro-content">
+                <h1 class="birthday-title">JOYEUX ANNIVERSAIRE</h1>
+                <button onclick="document.getElementById('view-intro').classList.remove('active'); document.getElementById('view-video').classList.add('active')" class="btn btn-primary btn-intro">Commencer</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Vue Vidéo -->
-    <div id="view-video" class="view active">
+    <div id="view-video" class="view">
         <div class="container">
             <video 
                 id="main-video" 
