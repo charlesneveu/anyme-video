@@ -219,7 +219,7 @@ body {
     box-shadow: var(--shadow);
     backdrop-filter: blur(10px);
     position: relative;
-    z-index: 10;
+    z-index: 100;
 }
 
 .table-content h1 {
@@ -259,12 +259,13 @@ body {
 
 /* Gâteau d'anniversaire */
 .cake-container {
-    position: absolute;
+    position: fixed;
     top: -100px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 5;
+    z-index: 1000;
     animation: cakeFall 1s ease-in forwards;
+    pointer-events: none;
 }
 
 @keyframes cakeFall {
@@ -280,15 +281,16 @@ body {
 
 .cake {
     font-size: 80px;
-    animation: cakeBounce 0.5s ease-in-out 1s infinite;
+    animation: cakeFloat 2s ease-in-out 1s infinite;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
 }
 
-@keyframes cakeBounce {
+@keyframes cakeFloat {
     0%, 100% {
         transform: translateY(0) scale(1);
     }
     50% {
-        transform: translateY(-15px) scale(1.1);
+        transform: translateY(-20px) scale(1.05);
     }
 }
 
@@ -300,7 +302,7 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1;
+    z-index: 100;
     overflow: hidden;
 }
 

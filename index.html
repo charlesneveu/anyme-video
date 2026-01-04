@@ -29,23 +29,9 @@
                     <h2>Vidéo terminée</h2>
                     <div class="button-group">
                         <button onclick="document.getElementById('main-video').currentTime=0; document.getElementById('main-video').play(); document.getElementById('end-screen').classList.add('hidden')" class="btn btn-primary">Revoir</button>
-                        <button onclick="document.getElementById('view-video').classList.remove('active'); document.getElementById('view-next').classList.add('active')" class="btn btn-secondary">se réconcilier avec Anyme</button>
+                        <button onclick="document.getElementById('view-video').classList.remove('active'); document.getElementById('view-table').classList.add('active')" class="btn btn-secondary">se réconcilier avec Anyme</button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Vue Suivant -->
-    <div id="view-next" class="view">
-        <div class="container">
-            <div class="next-content">
-                <h1>Merci d'avoir regardé</h1>
-                <p class="subtitle">Continuez votre découverte</p>
-                <button onclick="document.getElementById('view-next').classList.remove('active'); document.getElementById('view-table').classList.add('active')" class="btn btn-primary btn-large">
-                    Pour découvrir comment se réconcilier avec Anyme
-                </button>
-                <button onclick="document.getElementById('view-next').classList.remove('active'); document.getElementById('view-video').classList.add('active')" class="btn btn-link">Retour à la vidéo</button>
             </div>
         </div>
     </div>
