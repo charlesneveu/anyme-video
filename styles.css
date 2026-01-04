@@ -571,70 +571,140 @@ body {
 /* Desktop */
 @media (min-width: 768px) {
     .container {
-        padding: var(--spacing-xl);
+        padding: var(--spacing-xl) var(--spacing-2xl);
     }
     
     #view-video .container {
-        max-width: 900px;
-        padding: var(--spacing-xl);
+        max-width: 1000px;
+        padding: var(--spacing-xl) var(--spacing-2xl);
     }
     
     .button-group {
         flex-direction: row;
         justify-content: center;
-        gap: var(--spacing-md);
+        gap: var(--spacing-lg);
     }
     
     .btn {
-        min-width: 180px;
+        min-width: 200px;
+        padding: var(--spacing-md) var(--spacing-2xl);
+        font-size: 18px;
     }
     
     .end-screen-content {
-        padding: var(--spacing-2xl) var(--spacing-xl);
+        padding: var(--spacing-2xl) var(--spacing-2xl);
+        max-width: 600px;
     }
     
     .end-screen-content h2 {
-        font-size: 32px;
+        font-size: 36px;
+        margin-bottom: var(--spacing-xl);
     }
     
     .next-content {
-        padding: var(--spacing-2xl) var(--spacing-xl);
+        padding: var(--spacing-2xl) var(--spacing-2xl);
+        max-width: 700px;
     }
     
     .next-content h1 {
-        font-size: 44px;
+        font-size: 52px;
+        margin-bottom: var(--spacing-md);
     }
     
     .subtitle {
-        font-size: 19px;
+        font-size: 20px;
+        margin-bottom: var(--spacing-2xl);
     }
     
     .table-content {
-        padding: var(--spacing-2xl) var(--spacing-xl);
+        padding: var(--spacing-2xl) var(--spacing-2xl);
+        max-width: 700px;
     }
     
     .table-content h1 {
-        font-size: 48px;
+        font-size: 56px;
+        margin-bottom: var(--spacing-2xl);
     }
     
     .cake {
-        font-size: 100px;
+        font-size: 120px;
     }
     
     .video-player {
-        max-width: 900px;
+        max-width: 1000px;
+        border-radius: 24px;
     }
     
     .birthday-title {
-        font-size: 72px;
+        font-size: 80px;
+        margin-bottom: var(--spacing-2xl);
+    }
+    
+    .btn-intro {
+        font-size: 18px;
+        padding: var(--spacing-lg) var(--spacing-2xl);
+        min-width: 220px;
+    }
+    
+    .intro-content {
+        padding: var(--spacing-2xl) var(--spacing-2xl);
+        max-width: 800px;
+    }
+    
+    .candles-container {
+        gap: var(--spacing-lg);
+        bottom: var(--spacing-lg);
+    }
+    
+    .candle {
+        font-size: 48px;
     }
 }
 
 /* Large screens */
 @media (min-width: 1024px) {
+    .container {
+        padding: var(--spacing-2xl);
+    }
+    
+    #view-video .container {
+        max-width: 1200px;
+    }
+    
     .next-content,
     .table-content {
+        max-width: 800px;
+        padding: var(--spacing-2xl) var(--spacing-2xl);
+    }
+    
+    .next-content h1 {
+        font-size: 60px;
+    }
+    
+    .table-content h1 {
+        font-size: 64px;
+    }
+    
+    .birthday-title {
+        font-size: 96px;
+    }
+    
+    .video-player {
+        max-width: 1200px;
+    }
+    
+    .end-screen-content {
         max-width: 700px;
+        padding: var(--spacing-2xl) var(--spacing-2xl);
+    }
+    
+    .end-screen-content h2 {
+        font-size: 40px;
+    }
+    
+    .btn {
+        min-width: 220px;
+        padding: var(--spacing-lg) var(--spacing-2xl);
     }
 }
 
@@ -693,6 +763,12 @@ body {
     object-fit: cover;
     opacity: 0.6;
     pointer-events: none;
+}
+
+@media (min-width: 768px) {
+    .background-video {
+        opacity: 0.7;
+    }
 }
 
 /* Vue Intro Anniversaire */
